@@ -8,11 +8,11 @@ public class WcTest{
         String text = new String("wc is a tool to count \n the number of characters in a file.");
 		assertEquals(59,wc.CharacterCount(text));
 	}
-    // @Test
-    // public void should_give_the_count_of_lines(){
-    //     WordCount wc = new WordCount();
-    //     String text = new String("wc is\n a tool to count \n the number of characters in a file.");
-    //     assertEquals(60,wc.LineCount(text));
-    // }
+    @Test
+    public void should_give_the_count_of_lines(){
+        WordCount wc = new WordCount();
+        String text = new String("wc is\n a tool to count \n the number of characters in a file.");
+        assertEquals(3,wc.LineCount(text));
+    }
 
 }
