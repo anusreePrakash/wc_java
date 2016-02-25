@@ -7,18 +7,22 @@ public class ArgumentSeperatorTest {
     public void options_should_be_seperated_from_argument(){
         String[] argumentArray = {"-c", "TODO"};
         ArgumentSeperator argument = new ArgumentSeperator(argumentArray);
-        assertEquals("-c",argument.OptionSeperator());
+        String[] option = argument.optionSeperator();
+        assertEquals("-c",option[0]);
     }
     @Test
     public void options_should_be_seperated_from_argument_another(){
         String[] argumentArray = {"-w", "TODO"};
         ArgumentSeperator argument = new ArgumentSeperator(argumentArray);
-        assertEquals("-w",argument.OptionSeperator());
+        String[] option = argument.optionSeperator();
+        assertEquals("-w",option[0]);
     }
     @Test
     public void File_should_be_seperated_from_argument_another(){
         String[] argumentArray = {"-w", "TODO"};
         ArgumentSeperator argument = new ArgumentSeperator(argumentArray);
-        assertEquals("TODO",argument.FileSeperator());
+        String[] result = argument.fileSeperator();
+        assertEquals("TODO",result[0]);
     }
+
 }
