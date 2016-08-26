@@ -6,9 +6,9 @@ public class ArgumentSeperator {
         this.argument = arguments;
     }
 
-    public String[] optionSeperator() {
-        String[] optionsUsed = new String[this.argument.length];
-        int index = 0;
+    // public String[] optionSeperator() {
+    //     String[] optionsUsed = new String[this.argument.length];
+    //     int index = 0;
         for(int i = 0; i < this.argument.length; i++) {
             if (isOption(this.argument[i]))
                 optionsUsed[index++] = this.argument[i];
